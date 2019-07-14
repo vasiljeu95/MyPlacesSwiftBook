@@ -24,11 +24,21 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
-        
+        // Добавление ячейки Тайтл которой зависит от индекса массива
         cell.textLabel?.text = restaurantNames[indexPath.row]
+        // Добавляем изображение в ячейку
         cell.imageView?.image = UIImage(named: restaurantNames[indexPath.row])
+        // Делаем изображение круглым
+        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
+        cell.imageView?.clipsToBounds = true
         
         return cell
+    }
+    
+    // MARK: - TableViewDelegate
+    // Устанавливаем высоту ячейки
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
     }
     
     /*

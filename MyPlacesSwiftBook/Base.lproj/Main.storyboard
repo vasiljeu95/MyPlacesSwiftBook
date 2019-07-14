@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My Places-->
         <scene sceneID="sly-Iu-sJD">
             <objects>
                 <tableViewController id="yJj-cy-NZL" customClass="TableViewController" customModule="MyPlacesSwiftBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="yJj-cy-NZL" id="MDt-UY-3gT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tKb-DX-a4C"/>
+                    <navigationItem key="navigationItem" title="My Places" id="tKb-DX-a4C"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2f0-zu-ECW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,6 +45,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jsh-A9-rSA">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="yJj-cy-NZL" kind="relationship" relationship="rootViewController" id="kvH-46-lth"/>
